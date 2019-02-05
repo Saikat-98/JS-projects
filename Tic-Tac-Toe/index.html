@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" media="screen" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    </head>
+    <body>
+        <h1 class="game-message">Tic-Tac-Toe</h1></br></br></br>
+        <button class="btn" onclick="start()">Start a new game</button>
+        <div class="board">
+            <div id="row-1">
+                <div onclick="play(this,1)" id="div-1">&nbsp;</div>
+                <div onclick="play(this,2)" id="div-2">&nbsp;</div>
+                <div onclick="play(this,4)" id="div-3">&nbsp;</div>
+            </div>
+            <div id="row-2">
+                <div onclick="play(this,8)" id="div-4">&nbsp;</div>
+                <div onclick="play(this,16)" id="div-5">&nbsp;</div>
+                <div onclick="play(this,32)" id="div-6">&nbsp;</div>
+            </div>
+            <div id="row-3">
+                <div onclick="play(this,64)" id="div-7">&nbsp;</div>
+                <div onclick="play(this,128)" id="div-8">&nbsp;</div>
+                <div onclick="play(this,256)" id="div-9">&nbsp;</div>
+            </div>
+            <div style="clear: both;"></div></br></br>
+        </div>
+        <button class="btn-1" onclick="reset()">Wanna play another game?</button></br></br>
+        <div class="player-names">
+            <input type="text" class="player-1" placeholder="Player - 1's Name" required>
+            <input type="text" class="player-2" placeholder="Player - 2's Name" required>
+        </div>
+        <div style="clear: both;"></div>
+        <h6 class="error-message"></h6>
+        <table class="score-board">
+            <tr>
+                <td colspan="4" class="table-header">Score Board</td>
+            </tr>
+            <tr>
+                <td class="table-header-name" colspan="2">Player-name</td>
+                <td>&nbsp;</td>
+                <td class="table-header-score">Score</td>
+            </tr>
+            <tr>
+                <td class="player-1-name" colspan="2"></td>
+                <td></td>
+                <td class="player-1-score" colspan="2"></td>
+            </tr>
+            <tr>
+                <td class="player-2-name" colspan="2"></td>
+                <td></td>
+                <td class="player-2-score" colspan="2"></td>
+            </tr>
+            <tr>
+                <td class="draw-name" colspan="2"></td>
+                <td></td>
+                <td class="draw-score" colspan="2"></td>
+            </tr>
+        </table>
+        <button class="btn btn-2" onclick="startNew()">Start a new game</button>
+        <script src="script.js"></script>
+    </body>
+</html>
