@@ -9,16 +9,16 @@ var playerName=['Player-1','Player-2'];
 function validate(){
     var name1=document.querySelector('.player-1').value;
     var name2=document.querySelector('.player-2').value;
-    if(((((name1.charAt(0))<65)&&(name1.charAt(0))>90))||(((name1.charAt(0))<65)&&((name1.charAt(0))>90))){
-        if(((((name1.charAt(0))<65)&&(name1.charAt(0))>90))&&(((name1.charAt(0))<65)&&((name1.charAt(0))>90))){
+    if((name1.charAt(0)===name1.charAt(0).toLowerCase())||(name2.charAt(0)===name2.charAt(0).toLowerCase())){
+        if((name1.charAt(0)===name1.charAt(0).toLowerCase())||(name2.charAt(0)===name2.charAt(0).toLowerCase())){
             document.querySelector('.player-1').style.borderColor='red';
             document.querySelector('.player-2').style.borderColor='red';
         }
-        else if(!(((name1.charAt(0))<65)&&(name1.charAt(0))>90)){
+        else if(name1.charAt(0)===name1.charAt(0).toLowerCase()){
             document.querySelector('.player-1').style.borderColor='red';
             document.querySelector('.player-2').style.borderColor='#002E62';
         }
-        else if((!((name2.charAt(0))<65)&&(name2.charAt(0))>90)){
+        else if(name2.charAt(0)===name2.charAt(0).toLowerCase()){
             document.querySelector('.player-1').style.borderColor='#002E62';
             document.querySelector('.player-2').style.borderColor='red';
         }
