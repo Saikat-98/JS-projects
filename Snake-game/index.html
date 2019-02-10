@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <link rel="stylesheet" href="style.css" media="screen">
+        <link href="https://fonts.googleapis.com/css?family=Lato|ZCOOL+KuaiLe" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container-1">
+                <h1 class="header">S<span style="color: black;">n</span>a<span style="color: black;">k</span>e  <span style="color: black;">G</span>a<span style="color: black;">m</span>e</h1>
+            </div>
+            <div class="container-2">
+                <div class="board">
+                    <h1 class="game-message">Press 'Space' to begin</h1>
+                    <button class="btn" onclick="reset()">Start a new game</button>
+                </div>
+                <canvas id="canvas" width="600" height="600">
+                    <div class="snake"></div>
+                    <div class="food"></div>
+                </canvas>
+            </div>
+            <div class="score-board">
+                <table class="score-table">
+                    <tr colspan="4">
+                        <td class="score-board-heading"><center>Score Board</center></td>
+                    </tr>
+                    <tr>
+                        <td class="row-1">Your Score</td>
+                        <td></td>
+                        <td></td>
+                        <td class="your-score">0</td>
+                    </tr>
+                    <tr>
+                        <td class="row-2">Highest Score</td>
+                        <td></td>
+                        <td></td>
+                        <td class="highest-score">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
