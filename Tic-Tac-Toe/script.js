@@ -81,15 +81,15 @@ function start(){
 }
 
 function onclickReset(){
-        document.querySelector('#div-1').textContent='';document.querySelector('#div-1').innerHTML='';
-        document.querySelector('#div-2').textContent='';document.querySelector('#div-2').innerHTML='';
-        document.querySelector('#div-3').textContent='';document.querySelector('#div-3').innerHTML='';
-        document.querySelector('#div-4').textContent='';document.querySelector('#div-4').innerHTML='';
-        document.querySelector('#div-5').textContent='';document.querySelector('#div-5').innerHTML='';
-        document.querySelector('#div-6').textContent='';document.querySelector('#div-6').innerHTML='';
-        document.querySelector('#div-7').textContent='';document.querySelector('#div-7').innerHTML='';
-        document.querySelector('#div-8').textContent='';document.querySelector('#div-8').innerHTML='';
-        document.querySelector('#div-9').textContent='';document.querySelector('#div-9').innerHTML='';
+        document.querySelector('#div-1').innerHTML='';
+        document.querySelector('#div-2').innerHTML='';
+        document.querySelector('#div-3').innerHTML='';
+        document.querySelector('#div-4').innerHTML='';
+        document.querySelector('#div-5').innerHTML='';
+        document.querySelector('#div-6').innerHTML='';
+        document.querySelector('#div-7').innerHTML='';
+        document.querySelector('#div-8').innerHTML='';
+        document.querySelector('#div-9').innerHTML='';
 }
 
 function reset(){
@@ -102,6 +102,7 @@ function reset(){
     document.querySelector('.error-message').style.display='none';
     document.querySelector('.score-board').style.display='none';
     document.querySelector('.game-message').style.fontSize='65px';
+    document.querySelector('.game-message').innerHTML=playerName[activePlayer]+"'s turn";
     document.querySelector('.board').style.display='inline';
     document.querySelector('.player-names').style.display='none';
     onclickReset();
