@@ -17,7 +17,8 @@ document.querySelector('.header').onclick=function(){
 
 document.onkeyup=start;
 function start(event){
-    if(event.keyCode==32){
+    if(gameFlag==true&&event.keyCode==32){
+        gameFlag=false;
         document.querySelector('.game-message').style.display="none";
         document.querySelector('.game-message').classList.remove('gameover-message');
         document.querySelector('#canvas').style.display="block";
@@ -27,7 +28,7 @@ function start(event){
         if(flag==true){
             id=setInterval(draw,100);
             flag=false;
-        }   
+        }
     }
 }
 var cvs=document.getElementById("canvas");
@@ -38,6 +39,7 @@ var yourScore=0;
 var highestScore=0;
 var dir="right";
 var flag=true;
+var gameFlag=true;
 function drawSnake(x,y){                //create snake
     ctx.fillStyle="beige";
     ctx.fillRect(x*snakeWidth,y*snakeHeight,snakeWidth,snakeHeight);
@@ -89,7 +91,7 @@ function draw(){
     if(snakeX<-1||snakeY<-1||snakeX>=((cvs.width/snakeWidth)+1)||(snakeY>=(cvs.height/snakeHeight)+1))
         gameOver();                     //game over
     for(var i=1;i<snake.length;i++)
-        if((snakeX==snake[i].x&&snakeY==snake[i].y)&&snakeX>0&&snakeY>0)
+        if(snakeX==snake[i].x&&snakeY==snake[i].y)
             gameOver();                 //coincide game over
     if(snakeX==food.x&&snakeY==food.y){
         food={
@@ -112,7 +114,6 @@ function gameOver(){
     document.querySelector('.snake').style.display="none";
     document.querySelector('#canvas').style.display="none";
     document.querySelector('.board').style.display="block";
-    document.querySelector('.your-score').innerHTML="0";
     document.querySelector('.game-message').classList.add('gameover-message');
     if(yourScore>=highestScore){
         highestScore=yourScore;
@@ -121,6 +122,7 @@ function gameOver(){
     document.querySelector('.game-message').style.display="block";
     document.querySelector('.btn').style.display="block";
     document.querySelector('.game-message').innerHTML="Game - over!";
+    gameFlag=true;
 }
 
 function reset(){
