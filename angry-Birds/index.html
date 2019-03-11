@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+     <head>
+          <meta charset="utf-8">
+          <title>Angry Birds</title>
+          <link rel="stylesheet" href="style.css">
+     </head>
+     <body>
+          <h1 class="header">Angry Birds</h1>
+          <div class="eyelashes">
+               <div class="inner-eyelashes"></div>
+               <div class="inner-eyelashes"></div>
+          </div>
+          <div class="eyes">
+                    <div class="eye">
+                         <div class="ball"></div>
+                    </div>
+                    <div class="eye">
+                         <div class="ball"></div>
+                    </div>
+          </div>
+          <div class="mouth">
+               <div class="inner-mouth"></div>
+          </div>
+          <footer><b>Instructions : - </b> Scroll your cursor to see the magic. Beware don't try anything fishy!! Someone is staring !</footer>
+          <script type="text/javascript">
+               var balls=document.getElementsByClassName("ball");
+               var mouth=document.getElementsByClassName("inner-mouth");
+               document.onmousemove=function(){
+                    var x=event.clientX *100/window.innerWidth + "%";
+                    var y=event.clientY *100/window.innerHeight + "%";
+                    for(var i=0;i<2;i++){
+                         balls[i].style.left=x;
+                         balls[i].style.top=y;
+                         balls[i].style.transform="translate(-"+x+",-"+y+")";
+                    }
+                    var cx=event.clientX *100/window.innerWidth;
+                    var cy=event.clientY *100/window.innerHeight;
+                    if(cy>50){
+                         mouth[0].style.borderRightColor="transparent";
+                         mouth[0].style.borderLeftColor="transparent";
+                         mouth[0].style.borderTopColor="transparent";
+                         mouth[0].style.borderBottomColor="#EA9B24";
+                         mouth[0].style.boxShadow="none";
+                    }
+                    else if(cy<50){
+                         mouth[0].style.borderRightColor="transparent";
+                         mouth[0].style.borderLeftColor="transparent";
+                         mouth[0].style.borderBottomColor="transparent";
+                         mouth[0].style.borderTopColor="#EA9B24";
+                         mouth[0].style.boxShadow="none";
+                    }
+               }
+          </script>
+     </body>
+</html>
