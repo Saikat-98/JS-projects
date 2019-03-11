@@ -8,9 +8,10 @@ body{
      user-select: none;
 }
 .header{
-     font-size: 70px;
+     font-size: 80px;
      text-align: center;
      color: #DDA8C9;
+     font-weight: bold;
      text-shadow: 1px 1px 20px black;
 }
 .eyes{
@@ -55,8 +56,9 @@ body{
      height: 40px;
      display: inline-block;
      border-radius: 50%;
+     background: #EA9B24;
      border: 30px solid #EA9B24;
-     box-shadow:inset 1px 1px 2px black;
+     box-shadow: 1px 1px 2px black;
 }
 footer{
      text-align: center;
